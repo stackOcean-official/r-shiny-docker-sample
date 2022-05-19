@@ -20,7 +20,7 @@ duplicated_mod = readRDS("lin_mod.rds")
 
 # Define UI
 ui <- fluidPage(theme = shinytheme("lumen"),
-                titlePanel("Sunchair Prediciton"),
+                titlePanel("Beach chair prediciton"),
                 sidebarLayout(
                   sidebarPanel(
                     
@@ -47,7 +47,7 @@ server <- function(input, output) {
   # Pull in prediction depending on input factors
   output$predict <- renderText({
     trend_text <- round(predict(duplicated_mod, data.frame(max_temp = input$temp, sun_mins = input$sun, wspd = input$wind)))
-    paste(trend_text, "sunchairs need to be set up.")
+    paste(trend_text, "beach chairs need to be set up today.")
   })
 }
 
