@@ -6,6 +6,9 @@ library(shinythemes)
 library(dplyr)
 library(readr)
 
+# set port for shiny server
+options(shiny.port = 8000)
+
 # Load model
 lin_mod = readRDS("model/model.rds")
 
