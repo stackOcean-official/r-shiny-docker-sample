@@ -46,4 +46,4 @@ server <- function(input, output) {
 }
 
 # Create Shiny object
-shinyApp(ui = ui, server = server)
+shinyApp(ui = ui, server = server, port = 8000)
