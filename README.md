@@ -21,5 +21,5 @@ docker build -t r-shiny-docker-sample .
 ### How to run
 
 ```
-docker run --rm r-shiny-docker-sample
+docker run --rm -p 8000:8000 r-shiny-docker-sample
 ```
