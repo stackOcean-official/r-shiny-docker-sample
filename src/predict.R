@@ -7,7 +7,7 @@ library(dplyr)
 library(readr)
 
 # Load model
-lin_mod = readRDS("../model/lin_mod.rds")
+lin_mod = readRDS("model/lin_mod.rds")
 
 # Define UI
 ui <- fluidPage(theme = shinytheme("lumen"),

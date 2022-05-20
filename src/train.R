@@ -4,7 +4,7 @@
 library(readr)
 
 # Load data
-trend_data <- read_csv("../data/beach_chairs.csv")
+trend_data <- read_csv("data/beach_chairs.csv")
 
 # Add dummy for weekend
 trend_data$weekend <- ifelse(weekdays(as.Date(trend_data$Date)) == "Samstag" | weekdays(as.Date(trend_data$Date)) == "Sonntag" | weekdays(as.Date(trend_data$Date)) == "saturday" | weekdays(as.Date(trend_data$Date)) == "sunday", TRUE, FALSE)
@@ -17,4 +17,4 @@ wspd = trend_data$wspd
 weekend = trend_data$weekend
 lin_mod = lm(beach_chairs ~ max_temp + sun_mins + wspd + weekend, data = trend_data)
 summary(lin_mod)
-saveRDS(lin_mod, "../model/lin_mod.rds")
+saveRDS(lin_mod, "model/model.rds")
