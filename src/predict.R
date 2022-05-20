@@ -38,7 +38,7 @@ server <- function(input, output) {
   # Pull in prediction depending on input factors
   output$predict <- renderText({
     trend_text <- round(predict(lin_mod, data.frame(max_temp = input$temp, sun_mins = input$sun, wspd = input$wind, weekend = input$weekend)))
-    paste(trend_text, "beach chairs need to be set up today.")
+    paste(trend_text, "beach chairs need to be set up today. This is only a demo. The data were randomly generated and the prediction does not necessarily make sense.")
   })
 }
 
