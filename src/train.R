@@ -7,7 +7,7 @@ library(readr)
 trend_data <- read_csv("data/beach_chairs.csv")
 
 # Add dummy for weekend
-trend_data$weekend <- ifelse(weekdays(as.Date(trend_data$Date)) == "Samstag" | weekdays(as.Date(trend_data$Date)) == "Sonntag", TRUE, FALSE)
+trend_data$weekend <- ifelse(weekdays(as.Date(trend_data$Date)) == "Samstag" | weekdays(as.Date(trend_data$Date)) == "Sonntag" | weekdays(as.Date(trend_data$Date)) == "saturday" | weekdays(as.Date(trend_data$Date)) == "sunday", TRUE, FALSE)
 
 # Build model
 beach_chairs = trend_data$beach_chairs
