@@ -20,6 +20,20 @@ docker build -t r-shiny-docker-sample .
 
 ### How to run
 
+Use this command to run the dockerfile in the background
+
 ```
-docker run --rm -p 8000:8000 r-shiny-docker-sample
+docker run --rm -p 8000:8000 --name r-shiny r-shiny-docker-sample
+```
+
+To stop the server, use this command
+
+```
+docker stop r-shiny
+```
+
+To view logs of the container run
+
+```
+docker logs r-shiny
 ```

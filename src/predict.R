@@ -8,6 +8,7 @@ library(readr)
 
 # set port for shiny server
 options(shiny.port = 8000)
+options(shiny.host = "0.0.0.0")
 
 # Load model
 lin_mod = readRDS("model/model.rds")
@@ -46,4 +47,4 @@ server <- function(input, output) {
 }
 
 # Create Shiny object
-shinyApp(ui = ui, server = server, port = 8000)
+shinyApp(ui = ui, server = server)
