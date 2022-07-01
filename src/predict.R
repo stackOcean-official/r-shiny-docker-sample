@@ -25,7 +25,7 @@ ui <- fluidPage(theme = shinytheme("lumen"),
                     # slider to adjust sun minutes, wind speed and maximum temperature
                     sliderInput(inputId = "sun", label = "Sun minutes:", min = 0, max = 1440, value = 50, step = 10, animate = animationOptions(interval = 100)),
                     sliderInput(inputId = "wind", label = "Windspeed:", min = 0, max = 63, value = 8, step = 1, animate = animationOptions(interval = 100)),
-                    sliderInput(inputId = "temp", label = "Maximun Temperature:",min = -10, max = 50, value = 20, step = 1, animate = animationOptions(interval = 100))
+                    sliderInput(inputId = "temp", label = "Maximun Temperature:",min = 0, max = 50, value = 20, step = 1, animate = animationOptions(interval = 100))
                   ),
                   
                   # Output: Prediction how many sun chairs will be needed.
@@ -48,3 +48,4 @@ server <- function(input, output) {
 
 # Create Shiny object
 shinyApp(ui = ui, server = server)
+

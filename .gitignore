@@ -40,3 +40,6 @@ vignettes/*.pdf
 
 # Model
 /model/model.rds
+
+# Datageneration
+generate_windspeed_data.R
